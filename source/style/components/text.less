@@ -1,0 +1,54 @@
+.heading-xxlarge {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.heading-xlarge {
+  font-size: 48px;
+  font-weight: bold;
+}
+.heading-large {
+  font-size: 36px;
+  font-weight: 500;
+}
+.heading-middle {
+  font-size: 34px;
+  font-weight: bold;
+}
+.heading-small {
+  font-size: 24px;
+}
+.heading-body {
+  font-size: 16px;
+}
+.heading-descriptor {
+  font-size: 12px;
+}
+.text-bold {
+  font-weight: bold;
+}
+.text-semi-bold {
+  font-weight: 500;
+}
+.text-half-line {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 62%;
+    height: 3px;
+    background-color: #213b32;
+    transition: .3s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}

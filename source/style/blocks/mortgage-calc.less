@@ -1,0 +1,55 @@
+.mortgage-block {
+  padding-top: 41px;
+  padding-bottom: 81px;
+  background: #F6F6F6;
+  &__table {
+    padding-top: 33px;
+    padding-bottom: 50px;
+    width: 100%;
+    border-spacing: 0 20px;
+    thead {
+      color: #797979;
+      text-align: left;
+    }
+    tbody {
+      tr {
+        background: #FFFFFF;
+        box-shadow: 0 0 15px #F6F6F6;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      td {
+        padding: 7px 35px 7px 0;
+        &:first-child {
+          padding-left: 23px;
+        }
+      }
+      .logo {
+        max-width: 140px;
+        width: 100%;
+        height: 80px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: left;
+        }
+      }
+      .name {
+        & > * {
+          &:last-child {
+            display: block;
+            font-size: 14px;
+            margin-top: 7px;
+            color: #797979;
+          }
+        }
+      }
+      .percent {
+        span {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}

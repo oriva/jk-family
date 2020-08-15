@@ -1,0 +1,28 @@
+.index-plan {
+  padding-top: 120px;
+  &__tab {
+    display: inline-block;
+    margin-left: 31px;
+    color: #8A8A8A;
+    position: relative;
+    &.active {
+      color: #333333;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #213B32;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

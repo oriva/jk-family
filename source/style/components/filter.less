@@ -1,0 +1,32 @@
+.filter-blocks {
+  display:   flex;
+  flex-wrap: wrap;
+  &__item {
+    flex: 0 0 auto;
+    width: auto;
+    padding-right: 13px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  &__title {
+    display:        block;
+    color:          #999999;
+    padding-bottom: 12px;
+  }
+  &__dropdown {
+    position:            relative;
+    font-family:         "Montserrat", sans-serif;
+    border:              1px solid #D4D4D4;
+    box-sizing:          border-box;
+    border-radius:       30px;
+    padding:             13px 27px 13px 20px;
+    min-width:           190px;
+    -moz-appearance:     none;
+    -webkit-appearance:  none;
+    appearance:          none;
+    background-image:    url(../img/icons/select-arrow.svg);
+    background-position: right 10px center;
+    background-repeat:   no-repeat;
+  }
+}
