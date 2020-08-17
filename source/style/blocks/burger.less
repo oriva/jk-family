@@ -1,7 +1,79 @@
 .burger {
   &__button {
-    position: relative;
-    width: 36px;
-    height: 22px;
+    z-index:     2;
+    position:    relative;
+    width:       36px;
+    height:      22px;
+    cursor:      pointer;
+    transition:  .3s;
+    will-change: contents;
+    &:hover:not(.burger__button_open) {
+      transform: scaleY(1.1);
+      &::after {
+        width: 30%;
+      }
+    }
+    span, &::before, &::after {
+      position:         absolute;
+      height:           2px;
+      background-color: #333;
+      border-radius:    50px;
+      transition:       .5s;
+    }
+    span {
+      width: 100%;
+    }
+    &::before, &::after {
+      content: '';
+    }
+    &::before {
+      width:     100%;
+      top:       50%;
+      transform: translateY(-1px);
+    }
+    &::after {
+      width:      44.44%;
+      bottom:     0;
+      transition: .3s;
+    }
+    &_open {
+      &:hover {
+        transform: rotate(90deg);
+      }
+      &::after {
+        width: 0;
+      }
+      &::before {
+        transform: translateY(-1px) rotate(45deg);
+      }
+      span {
+        transform: translateY(10px) rotate(-45deg);
+      }
+      span, &::before, &::after {
+        background-color: #fff;
+      }
+      & + .burger__menu {
+        right: 0;
+      }
+    }
+  }
+  &__menu {
+    position:         absolute;
+    top:              0;
+    right:            -100%;
+    height:           100vh;
+    width:            60%;
+    overflow:         auto;
+    background-color: #213B32;
+    transition:       .5s ease-in-out;
+  }
+  &__menu-items {
+    padding-left: 96px;
+    li {
+      padding-bottom: 40px;
+    }
+    a {
+      color: #FFF;
+    }
   }
 }

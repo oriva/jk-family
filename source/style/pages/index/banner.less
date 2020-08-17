@@ -10,9 +10,56 @@
     }
   }
   &__slider {
+    position: relative;
     img {
       display: block;
       width:   100%;
+    }
+    .owl-carousel.owl-loaded {
+      display: flex;
+    }
+  }
+  &__arrow-block {
+    z-index:   2;
+    position:  absolute;
+    top:       50%;
+    left:      0;
+    display:     flex;
+    flex-wrap:   wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:     100%;
+    transform: translateY(-50%);
+  }
+  &__arrow-left, &__arrow-right {
+    display:     flex;
+    flex-wrap:   wrap;
+    align-items: center;
+    cursor:      pointer;
+    div {
+      width:               46px;
+      height:              46px;
+      border-radius:       50%;
+      border:              2px solid rgba(242, 242, 242, 0.3);
+      background-color:    #fff;
+      background-image:    url('/img/icons/arrow-slider.svg');
+      background-position: center left 14px;
+      background-repeat:   no-repeat;
+      background-size:     12px;
+      transition:          .3s;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+  &__arrow-left {
+
+  }
+  &__arrow-right {
+    div {
+      transform:   rotate(180deg);
     }
   }
   &__line {

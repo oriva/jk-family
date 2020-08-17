@@ -1,13 +1,22 @@
 .header {
-  z-index: 10; 
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  padding-top: 41px;
-  padding-bottom: 41px;
+  z-index:          10;
+  position:         fixed;
+  width:            100%;
+  left:             0;
+  top:              0;
+  padding-top:      25px;
+  padding-bottom:   27px;
   background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow:       0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:       .6s;
+  will-change:      scroll-position;
+  &_up {
+    transform: translateY(-110%);
+  }
+  &_scroll {
+    padding-top:    21px;
+    padding-bottom: 21px;
+  }
   &__logo {
     display: block;
     max-width: 100%;
@@ -24,6 +33,6 @@
   }
   &__callback {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }

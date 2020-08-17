@@ -1,0 +1,50 @@
+.hover-line {
+  position: relative;
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    background-color: #fff;
+  }
+  &_black {
+    &::after, &::before {
+      background-color: #333333;
+    }
+  }
+  &::before {
+    left: 0;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+    transition-property: width;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  }
+  &::after {
+    right: 0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      -webkit-transition: width .5s ease;
+      transition: width .5s ease;
+      transition-property: width;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+    }
+    &::after {
+      width: 100%;
+      -webkit-transition: width 0s ease .5s;
+      transition: width 0s ease .5s;
+    }
+  }
+}

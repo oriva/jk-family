@@ -1,0 +1,80 @@
+.about-other {
+  display:        flex;
+  flex-wrap:      wrap;
+  align-items:    center;
+  padding-top:    120px;
+  padding-bottom: 90px;
+  &__text {
+    flex:  0 0 63%;
+    width: 63%;
+  }
+  &__text-title {
+    padding-bottom: 56px;
+  }
+  &__text-desc {
+    padding-left: 40px;
+  }
+  &__img-block {
+    flex:         0 0 37%;
+    width:        37%;
+    padding-left: 15px;
+    img {
+      display: block;
+      width:   100%;
+    }
+  }
+}
+
+.about-img {
+  overflow:      hidden;
+  border-radius: 10px;
+  img {
+    display: block;
+    width:   100%;
+  }
+}
+
+.about-points-block {
+  padding-top: 95px;
+  padding-bottom: 103px;
+  &__title {
+    padding-bottom: 35px;
+  }
+  &__text {
+    position: relative;
+    padding: 38px 82px 0;
+  }
+  &__bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+  }
+  &__points {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 0 0 50%;
+      width: 50%;
+      font-size: 24px;
+      font-weight: bold;
+      padding-bottom: 46px;
+      & > div {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      & > span {
+        flex: 1;
+        padding-left: 32px;
+        padding-right: 22px;
+      }
+    }
+  }
+}
